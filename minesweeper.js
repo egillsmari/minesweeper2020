@@ -97,60 +97,64 @@ function isMine(rows, cols, minesArray) {
 }
 
 function placeNumbers(board_array, cols, rows) {
+    var tempLis = [];
     for (i=0;i<cols;i++){
+        tempLis.push([]);
         for (j=0;j<rows;j++) {
-            var temp = board_array[i][j];
+            tempLis[i].push(0);
+            var tempBomb = 0;
             console.log(board_array[i]);
-
+            var btn = document.getElementById("" + i + "-" + j);
             if (board_array[i][j] === "M") {
                 console.log("bomb!!!!");
+                tempLis[i][j] = "M";
                 continue
             }
             try{
             if (board_array[i-1] [j-1] === "M"){
-                board_array[i][j].innerHTML += 1
+                tempBomb += 1
             }
             }
             catch (e) {}
             try{
             if (board_array[i][j-1] === "M"){
-                board_array[i][j].innerHTML += 1
-            }
-            }
+                tempBomb += 1
+            }}
             catch (e) {}
             try{
             if (board_array[i][j+1] === "M"){
-                board_array[i][j].innerHTML += 1
-            }
-            }
+                tempBomb += 1
+            }}
             catch (e) {}
             try{
             if (board_array[i+1][j-1] === "M"){
-                board_array[i][j].innerHTML += 1
-            }
-            }
+                tempBomb += 1
+            }}
             catch (e) {}
             try{
                 if (board_array[i+1][j+1] === "M"){
-                    board_array[i][j].innerHTML += 1
-            }
-            }
+                    tempBomb += 1
+            }}
             catch (e) {}
             try{
                 if (board_array[i+1][j] === "M"){
-                    board_array[i][j].innerHTML += 1
-            }
-            }
+                    tempBomb += 1
+            }}
             catch (e) {}
             try {
                 if (board_array[i - 1][j + 1] === "M") {
-                    board_array[i][j].innerHTML += 1
-                }
+                    tempBomb += 1}
             }
             catch (e) {}
+            try {
+                if (board_array[i-1][j] === "M") {
+                    tempBomb += 1}
             }
+            catch (e) {}
+            btn.innerHTML = ""+tempBomb
             }
-    console.log(board_array);
+    }
+
 }
 
 
