@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="css/minesweeper.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+
+
+
+
+<body id="body">
+    <div id="parent">
+        <div class="input-boxes">
+            Rows: <input type="text" name="Rows" id="rows">
+            Columns: <input type="text" name="Columns" id="columns">
+            Mines: <input type="text" name="Mines" id="mines">
+            <button id="generate" type="button" onclick="generateBoard()">Generate board</button>
+        </div>
+        <div id="game-board">
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="minesweeper.js"></script>
+</body>
+</html>

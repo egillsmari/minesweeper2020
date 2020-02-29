@@ -1,0 +1,50 @@
+
+#parent{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-boxes{
+    width: 261px;
+    padding-bottom: 20px;
+}
+
+#rows{
+    width: 150px;
+}
+
+#columns{
+    width: 150px;
+}
+
+#mines{
+    width: 150px;
+}
+
+#game-board{
+    display: inline-block;
+    padding: 2px;
+    border: 1px solid darkgray;
+    border-radius: 2px;
+}
+
+#around-board{
+    display: flex;
+}
+
+.field{
+    background-color: lightgray;
+    font-size: 15px;
+    border-radius: 2px;
+    margin-right: 0.5px;
+    margin-left: 0.5px;
+}
+
+#flag{
+    width: 15px;
+    height: 15px;
+    transform: translate(-30%, -2%);
+}
+
