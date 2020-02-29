@@ -1,4 +1,9 @@
 
+button{
+    width: 30px;
+    height: 30px;
+}
+
 #parent{
     position: fixed;
     top: 50%;
@@ -35,8 +40,9 @@
 }
 
 .field{
-    background-color: lightgray;
-    font-size: 15px;
+
+    width: 30px;
+    height: 30px;
     border-radius: 2px;
     margin-right: 0.5px;
     margin-left: 0.5px;
@@ -48,3 +54,7 @@
     transform: translate(-30%, -2%);
 }
 
+button{
+    width: 30px;
+    height: 30px;
+}
